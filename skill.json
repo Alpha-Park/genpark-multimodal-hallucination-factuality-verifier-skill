@@ -1,0 +1,39 @@
+{
+  "name": "genpark-multimodal-hallucination-factuality-verifier-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Ground-truth factuality validator and contradiction segment detector identifying hallucinations in agent responses.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "governance",
+  "tags": [
+    "cleanlab",
+    "hallucination-detector",
+    "factuality-checker",
+    "data-centric-ai",
+    "agent-evals"
+  ],
+  "inputs": {
+    "ground_truth_context": {
+      "type": "string"
+    },
+    "agent_generated_statement": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "verification_id": {
+      "type": "string"
+    },
+    "factuality_score": {
+      "type": "number"
+    },
+    "hallucination_detected": {
+      "type": "boolean"
+    },
+    "hallucination_audit_report_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
